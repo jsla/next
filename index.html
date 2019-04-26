@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var d = new Date()
+      d.setMonth(d.getMonth() + 1)
+      var year = d.getFullYear()
+      var month = [
+        'january',
+        'february',
+        'march',
+        'april',
+        'may',
+        'june',
+        'july',
+        'august',
+        'september',
+        'november',
+        'december'
+      ][d.getMonth()]
+      window.location.href = `https://jsla-${month}-${year}.eventbrite.com/?aff=site`
+    </script>
+  </body>
+</html>
