@@ -6,23 +6,40 @@
   </head>
   <body>
     <script>
-      var d = new Date()
-      d.setMonth(d.getMonth() + 1)
-      var year = d.getFullYear()
-      var month = [
-        'january',
-        'february',
-        'march',
-        'april',
-        'may',
-        'june',
-        'july',
-        'august',
-        'september',
-        'november',
-        'december'
-      ][d.getMonth()]
-      window.location.href = `https://jsla-${month}-${year}.eventbrite.com/?aff=site`
+
+      var href = window.location.href
+      if (href.match('next.js.la')) rNext()
+      if (href.match('minutes.js.la')) rMinutes()
+      if (href.match('hangout.js.la')) rHangout()
+
+      function rHangout () {
+        window.location.href = 'https://meet.google.com/fyy-fmgz-mjm'
+      }
+
+      function rMinutes () {
+        window.location.href = 'https://docs.google.com/document/d/1cS2V-3o4iOJtb3_mLiqTlPvTsxRIqE5DOLq84_cJu6A/edit'
+      }
+
+      function rNext () {
+        var d = new Date()
+        d.setMonth(d.getMonth() + 1)
+        var year = d.getFullYear()
+        var month = [
+          'january',
+          'february',
+          'march',
+          'april',
+          'may',
+          'june',
+          'july',
+          'august',
+          'september',
+          'november',
+          'december'
+        ][d.getMonth()]
+        window.location.href = `https://jsla-${month}-${year}.eventbrite.com/?aff=site`
+      }
+
     </script>
   </body>
 </html>
